@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Your Data</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="https://mpng.subpng.com/20180516/zq/kisspng-computer-icons-google-account-icon-design-login-5afc02dab4a218.0950785215264652427399.jpg">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+  
+<body>
+    <div class="container">
+<h1>Enter Data</h1>
+
+<form action="/data" method="post">
+    <div class="form-group">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="dataBody"></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit" >Submit</button>
+</form>
+
+<h1> Your saved data</h1>
+<% content.forEach(function(data) { %>
+  <p> 
+    <%= data.content %>  
+  </p>
+  
+ <% }); %>
+
+</div>
+
+</body>
+</html>
